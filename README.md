@@ -1,3 +1,5 @@
+This is my flashcards app. You might be thinking 'Wade just use quizlet' no thanks because making the app is way cooler. Alright enough small talk, here's the boiler plate react template.👇🏼
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
