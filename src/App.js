@@ -8,6 +8,13 @@ function App() {
 
   useEffect(() => {
     axios.get('https://opentdb.com/api.php?amount=10').then((res) => {
+      res.data.results.map((questionItem, index) => {
+        return {
+          id: `${index}-${Date.now()}`,
+          questions: questionItem.question,
+          answer: questionItem.correct_answer,
+        }
+      })
       console.log(res.data)
     })
   }, [])
