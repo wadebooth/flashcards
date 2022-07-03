@@ -58,3 +58,7 @@ body {
   position: absolute;
   padding: 1rem;
 }
+
+.card .back {
+  transform: rotateY(180deg);
+}
