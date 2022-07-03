@@ -25,11 +25,6 @@ export default function Flashcard({ flashcard }) {
     >
       <div className='front' ref={frontEl}>
         {flashcard.questions}
-        {/* <div className='flashcard-options'>
-          {flashcard.option.map((option) => {
-            return <div className='flashcard-option'>{option}</div>
-          })}
-        </div> */}
       </div>
       <div className='back' ref={backEl}>
         {flashcard.answer}
