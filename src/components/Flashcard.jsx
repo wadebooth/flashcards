@@ -13,6 +13,10 @@ export default function Flashcard({ flashcard }) {
   }
 
   useEffect(setMaxHeight, [flashcard.question, flashcard.answer])
+  useEffect(() => {
+    window.addEventListener('resize', setMaxHeight)
+    return () => window.removeEventListener('resize', setMaxHeight)
+  }, [])
   return (
     <div
       className={`card ${flip ? 'flip' : ''}`}
