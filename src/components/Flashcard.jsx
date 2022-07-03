@@ -10,12 +10,12 @@ export default function Flashcard({ flashcard }) {
       <div className='front'>
         {flashcard.question}
         <div className='flashcard-options'>
-          {flashcard.options.map((option) => {
+          {flashcard.option.map((option) => {
             return <div className='flashcard-option'>{option}</div>
           })}
         </div>
       </div>
-      {flip ? flashcard.answer : flashcard.question}
+      <div className='back'>{flashcard.answer}</div>
     </div>
   )
 }
