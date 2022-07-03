@@ -7,6 +7,14 @@ export default function Flashcard({ flashcard }) {
       clsasName={`card ${flip ? 'flip' : ''}`}
       onClick={() => setFlip(!flip)}
     >
+      <div className='front'>
+        {flashcard.question}
+        <div className='flashcard-options'>
+          {flashcard.options.map((option) => {
+            return <div className='flashcard-option'>{option}</div>
+          })}
+        </div>
+      </div>
       {flip ? flashcard.answer : flashcard.question}
     </div>
   )
