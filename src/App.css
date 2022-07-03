@@ -49,8 +49,14 @@ body {
   border-radius: 0.25rem;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
   background-color: white;
+  transform-style: preserve-3d;
   height: 150px;
   width: 150px;
+  transform: rotateY(var(--rotate-y, 0));
+}
+
+.card.flip {
+  --rotate-y: 180deg;
 }
 
 .card .front,
