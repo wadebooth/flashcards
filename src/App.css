@@ -52,7 +52,8 @@ body {
   transform-style: preserve-3d;
   height: 150px;
   width: 150px;
-  transform: rotateY(var(--rotate-y, 0));
+  transition: 150ms;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0));
 }
 
 .card.flip {

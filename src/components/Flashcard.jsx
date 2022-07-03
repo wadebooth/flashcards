@@ -4,7 +4,7 @@ export default function Flashcard({ flashcard }) {
   const [flip, setFlip] = useState(false)
   return (
     <div
-      clsasName={`card ${flip ? 'flip' : ''}`}
+      className={`card ${flip ? 'flip' : ''}`}
       onClick={() => setFlip(!flip)}
     >
       <div className='front'>
