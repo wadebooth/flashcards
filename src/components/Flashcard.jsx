@@ -9,11 +9,11 @@ export default function Flashcard({ flashcard }) {
     >
       <div className='front'>
         {flashcard.question}
-        <div className='flashcard-options'>
+        {/* <div className='flashcard-options'>
           {flashcard.option.map((option) => {
             return <div className='flashcard-option'>{option}</div>
           })}
-        </div>
+        </div> */}
       </div>
       <div className='back'>{flashcard.answer}</div>
     </div>
