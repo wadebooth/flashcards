@@ -41,6 +41,12 @@ body {
   background-color: #c8d0d2;
 }
 
+.card-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
 .card {
   display: flex;
   justify-content: center;
