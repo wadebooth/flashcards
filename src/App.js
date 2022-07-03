@@ -21,6 +21,12 @@ function App() {
     })
   }, [])
 
+  function decodeString(str) {
+    const textArea = document.createElement('textarea')
+    textArea.innerHTML = str
+    return textArea.value
+  }
+
   return <FlashcardList flashcards={flashcards} />
 }
 
