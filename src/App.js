@@ -10,10 +10,11 @@ function App() {
     axios.get('https://opentdb.com/api.php?amount=10').then((res) => {
       setFlashcards(
         res.data.results.map((questionItem, index) => {
+          const answer = decodeString(questionItem.correct_answer)
           return {
             id: `${index}-${Date.now()}`,
-            questions: questionItem.question,
-            answer: questionItem.correct_answer,
+            questions: decodeString(questionItem.question),
+            answer: answer,
           }
         })
       )
