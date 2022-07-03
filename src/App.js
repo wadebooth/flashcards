@@ -10,7 +10,7 @@ function App() {
   const categoryEl = useRef()
 
   useEffect(() => {
-    axios.get('https://opentdb.com/api_cateogory.php').then((res) => {
+    axios.get('https://opentdb.com/api_category.php').then((res) => {
       setCategories(res.data.trivia_categories)
     })
   }, [])
