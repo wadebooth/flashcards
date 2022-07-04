@@ -28,7 +28,6 @@ function App() {
           }
         })
       )
-      console.log(res.data)
     })
   }, [])
 
@@ -40,13 +39,32 @@ function App() {
 
   function handleSubmit(e) {
     e.preventDefault()
+    axios
+      .get('https://opentdb.com/api.php', {
+        params: {
+          amount: amountEl.current.value,
+          category: categoryEl.current.value,
+        },
+      })
+      .then((res) => {
+        setFlashcards(
+          res.data.results.map((questionItem, index) => {
+            const answer = decodeString(questionItem.correct_answer)
+            return {
+              id: `${index}-${Date.now()}`,
+              questions: decodeString(questionItem.question),
+              answer: answer,
+            }
+          })
+        )
+      })
   }
 
   return (
     <>
       <form className='header' onSumbit={handleSubmit}>
         <div className='form-group'>
-          <label htmlForm='category'>Category</label>
+          <label htmlform='category'>Category</label>
           <select id='category' ref={categoryEl}>
             {categories.map((category) => {
               return (
@@ -58,7 +76,7 @@ function App() {
           </select>
         </div>
         <div className='form-group'>
-          <label htmlForm='amount'>Number of Questions</label>
+          <label htmlform='amount'>Number of Questions</label>
           <input
             type='number'
             id='amount'
@@ -67,6 +85,9 @@ function App() {
             defaultValue={10}
             ref={amountEl}
           />
+        </div>
+        <div className='form-group'>
+          <button className='btn'>Generate</button>
         </div>
       </form>
       <div className='container'>
