@@ -1,4 +1,4 @@
-This is my flashcards app!! You may be thinking 'Wade just use quizlet' no thanks, making the app is way cooler! Alright enough small talk, here's the boiler plate react readme template.👇🏼
+This is my flashcards app!! You may be thinking 'Wade, just use quizlet' no thanks, making the app is way cooler! Alright enough small talk, here's the boiler plate react readme template.👇🏼
 
 # Getting Started with Create React App
 
